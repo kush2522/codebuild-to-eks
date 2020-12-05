@@ -13,7 +13,7 @@ phases:
       - mkdir -p $HOME/bin && cp ./aws-iam-authenticator $HOME/bin/aws-iam-authenticator && export PATH=$HOME/bin:$PATH
       - aws-iam-authenticator help
       # Configure kubectl
-      - aws eks --region us-east-1 update-kubeconfig --name devel
+      - aws eks --region us-east-2 update-kubeconfig --name eksworkshop-eksctl
   build:
     commands:
       - kubectl apply -f deployment
